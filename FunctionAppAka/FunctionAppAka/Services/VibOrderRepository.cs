@@ -19,6 +19,7 @@ namespace FunctionAppAka.Services
             var config = new ConfigurationBuilder()
                        .SetBasePath(Environment.CurrentDirectory)
                        .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true)
+                       .AddJsonFile("host.json", optional: true, reloadOnChange: true)
                        .AddEnvironmentVariables()
                        .Build();
 
