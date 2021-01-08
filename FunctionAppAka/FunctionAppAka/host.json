@@ -7,8 +7,5 @@
         "isEnabled": true
       }
     }
-  },
-  "ConnectionStrings": {
-    "DefaultConnectionString": "Server=akadataserver.database.windows.net;Database=AurzeFunctionAppTestDb;uid=aka;pwd=way4501ya!;"
   }
 }
