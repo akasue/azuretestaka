@@ -5,6 +5,9 @@
     "FUNCTIONS_WORKER_RUNTIME": "dotnet"
   },
   "ConnectionStrings": {
-    "DefaultConnectionString": "Server=.;Database=AurzeFunctionAppTestDb;uid=sa;pwd=sa;"
+    //"DefaultConnectionString": "Server=.;Database=AurzeFunctionAppTestDb;uid=sa;pwd=sa;",
+
+    "DefaultConnectionString": "Server=akadataserver.database.windows.net;Database=AurzeFunctionAppTestDb;uid=aka;pwd=way4501ya!;"
+
   }
 }

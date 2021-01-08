@@ -32,22 +32,20 @@ namespace FunctionAppAka.Services
 
         public IEnumerable<VibOrder> GetOrders(VibOrder order)
         {
-            var sql = "select * from viborder ";
-            if (order != null)
-                sql += "where ";
+            var sql = "select * from viborder where 1=1 ";
 
 
             if (order.PurchaseOrderNumber.IsNotNullOrEmpty())
-                sql += "PurchaseOrderNumber = @PurchaseOrderNumber ";
+                sql += "and PurchaseOrderNumber = @PurchaseOrderNumber ";
 
             if (order.BillingZipCode.IsNotNullOrEmpty())
-                sql += "BillingZipCode = @BillingZipCode ";
+                sql += "and BillingZipCode = @BillingZipCode ";
 
             if (order.BuyerName.IsNotNullOrEmpty())
-                sql += "BuyerName = @BuyerName ";
+                sql += "and BuyerName = @BuyerName ";
 
             if (order.OrderAmount != 0)
-                sql += "OrderAmount = @OrderAmount ";
+                sql += "and OrderAmount = @OrderAmount ";
 
             return _db.Query<VibOrder>(sql, order);
         }

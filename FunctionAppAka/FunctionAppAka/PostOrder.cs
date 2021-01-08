@@ -62,10 +62,10 @@ namespace FunctionAppAka
                 OrderAmount = orderAmount.ToDecimal(),
             });
 
-            return new ObjectResult("Add Success")
+            return await Task.FromResult(new ObjectResult("Add Success")
             {
                 StatusCode = StatusCodes.Status201Created
-            };
+            });
         }
     }
 }

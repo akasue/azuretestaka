@@ -37,7 +37,7 @@ namespace FunctionAppAka
             }
 
             var orders = ser.GetOrders(param);
-            return new OkObjectResult(orders);
+            return await Task.FromResult(new OkObjectResult(orders));
         }
     }
 }
